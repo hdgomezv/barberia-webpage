@@ -12,7 +12,7 @@
 <body>
     <header>
         <div class="box">
-            <h1><img src="./img/logo.png"></h1>
+            <h1><img src="./img/logo.png" alt="logo barbería Alura"></h1>
             <nav>
                 <ul class="navigation">
                     <li><a href="./index.html">Home</a></li>
@@ -25,21 +25,51 @@
     <main>
         <form>
             <label for="nombre-apellido">Nombre y Apellido</label>
-            <input type="text" id="nombre-apellido">
+            <input class="input-padron" type="text" id="nombre-apellido" required>
 
             <label for="email">Correo Electrónico</label>
-            <input type="text" id="email">
+            <input class="input-padron" type="email" id="email" required placeholder="email@dominio.com">
 
             <label for="telefono">Teléfono</label>
-            <input type="text" id="telefono">
+            <input class="input-padron" type="tel" id="telefono" required placeholder="(XX) XXXX XXXX">
 
-            <input type="submit" value="Enviar Formulario">
+            <label for="mensaje">Mensaje</label>
+            <textarea class="input-padron" id="mensaje" cols="70" rows="10" required></textarea>
+
+            <fieldset>
+                <legend>¿Cómo le gustaría que lo contactemos?</legend>
+
+                <label for="radio-email"><input type="radio" value="email" id="radio-email"
+                        name="contacto">Email</label>
+
+
+                <label for="radio-telefono"><input type="radio" value="telefono" id="radio-telefono"
+                        name="contacto">Teléfono</label>
+
+
+                <label for="radio-whatsapp"><input type="radio" value="whatsapp" id="radio-whatsapp"
+                        name="contacto" checked>Whatsapp</label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>¿En cual horario prefiere ser atendido?</legend>
+                <select>
+                    <option>Mañana</option>
+                    <option>Tarde</option>
+                    <option>Noche</option>
+                </select>
+            </fieldset>
+
+            <label class="checkbox"><input type="checkbox" checked>¿Le gustaría recibir novedades de la Barbería Allura?</label>
+
+            <input type="submit" value="Enviar Formulario" class="enviar">
 
         </form>
-        
+
     </main>
     <footer>
-        <img src="./img/logo-blanco.png">
+        <img src="./img/logo-blanco.png" alt="logo barbería Alura">
         <p class="copyright">&copy Copyright Barbería Allura Latam - David Gomez - 2023</p>
     </footer>
 </body>
